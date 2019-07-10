@@ -1,6 +1,7 @@
 @import "typography.css";
 
 $main-color: #521751;
+$border-default: 0.05rem solid $main-color;
 
 html {
     font-size: 94.75%;
@@ -26,7 +27,7 @@ body {
 }
 
 .sass-introduction {
-    border: 0.05rem solid $main-color;
+    border: $border-default;
     background: #fae5ff;
     padding: 2rem;
     text-align: center;
@@ -40,7 +41,7 @@ body {
 }
 
 .sass-details {
-    border: 0.05rem solid $main-color;
+    border: $border-default;
     background: #fae5ff;
     padding: 1rem;
     text-align: center;
@@ -50,7 +51,7 @@ body {
 }
 
 .section-header {
-    border-bottom: 0.05rem solid $main-color;
+    border-bottom: $border-default;
 }
 
 .section-header h1 {
@@ -77,7 +78,7 @@ body {
         color: $main-color;
         display: block;
         padding: 0.2rem;
-        border: 0.05rem solid $main-color;
+        border: $border-default;
     }
 
     .documentation-link:hover,
