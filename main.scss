@@ -1,7 +1,8 @@
 @import "typography.css";
 
-$main-color: #521751;
-$border-default: 0.05rem solid $main-color;
+$colors: (main:#521751, secondary:#fa923f, background:#fae5ff);
+$border-default: 0.05rem solid map-get($colors, main);
+
 
 html {
     font-size: 94.75%;
@@ -28,7 +29,7 @@ body {
 
 .sass-introduction {
     border: $border-default;
-    background: #fae5ff;
+    background: map-get($colors, background);
     padding: 2rem;
     text-align: center;
     box-shadow: 0.2rem 0.2rem 0.1rem #ccc;
@@ -42,7 +43,7 @@ body {
 
 .sass-details {
     border: $border-default;
-    background: #fae5ff;
+    background: map-get($colors, background);
     padding: 1rem;
     text-align: center;
     margin: 2rem 0;
@@ -75,7 +76,7 @@ body {
 
     .documentation-link {
         text-decoration: none;
-        color: $main-color;
+        color: map-get($colors, main);
         display: block;
         padding: 0.2rem;
         border: $border-default;
@@ -84,8 +85,8 @@ body {
     .documentation-link:hover,
     .documentation-link:active {
         color: white;
-        background: #fa923f;
-        border-color: #fa923f;
+        background: map-get($colors, secondary);
+        border-color: map-get($colors, secondary);
     }
 }
 
